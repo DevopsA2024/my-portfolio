@@ -32,7 +32,6 @@ jobs:
    runs-on: ubuntu-latest
    steps:
       - name: ssh to server
-        uses:  name: Remote SSH Command
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.HOST }}
