@@ -24,7 +24,7 @@ jobs:
             python-version: ${{env.python_version}}  # or $python_version
       - name: install dependencies
         run: |
-          pip install: Install --upgrade pip
+          pip install: install --upgrade pip
           pip install pytest
           pip install -r requirements.txt
       - name: unit test
