@@ -30,9 +30,9 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: ${{en.AWS_REGION}}
-    #   - name: Build image
-    #     run: docker build -t DevopsA2024/portcicd .
+          aws-region: ${{env.AWS_REGION}}
+      - name: Build image
+        run: docker build -t DevopsA2024/portcicd .
       - name: check credentials
         run: aws s3 ls
 
